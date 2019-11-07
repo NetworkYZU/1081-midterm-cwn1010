@@ -17,11 +17,18 @@
     <body>
         <a href="order.jsp"><button>去加購</button></a><br/>
         您購物車裡的食物：<br/>
+      
         <table style="width: 90%;" border="1">
             <thead>
                 <th>項目</th>
             </thead>
             <tbody>
+                String [] foodList=new String[]{"氧氣草", "惡魔果實", "拉麪", "炸雞", "哥吉拉"};
+                String foodList = request.getParameter("foodList");
+                HttpSession session=request.getSession();
+                session.setAttribute("foodList", foodList);
+                
+                
                 <!--
                 question 1 (30%)
                 從 session 取得 foodList 這個 attribute 
@@ -33,6 +40,7 @@
             </tbody>
         </table>
         <a href="checkout.jsp"><button>Checkout</button></a><br/>
+        <jsp:include page="/WEB-inF/footer.jsp"/>
         <!--
         question 2 (10%)
         引用 /WEB-INF/footer.jsp

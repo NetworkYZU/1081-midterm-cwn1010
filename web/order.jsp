@@ -12,11 +12,14 @@
         <title>FoodKoala, your elite food ordering and delivering service</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     </head>
-    <body>
+    
+        
+       
         <!--
         question 3 (10%)
         將表單的目標設定爲 addOrder，使用 post
         -->
+        <form method="POST" action="SessionServlet">
         <form>
             <select name="food">
                 <option value="氧氣草">氧氣草</option>
@@ -27,6 +30,7 @@
             </select>
             <input type="submit"/>
         </form>
-       
+       </form>
+    
     </body>
 </html>
